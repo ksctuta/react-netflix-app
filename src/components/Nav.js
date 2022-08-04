@@ -30,7 +30,7 @@ export default function Nav() {
 
     return (
         <nav className={`nav ${show && "nav__black"} `}>
-            <img alt='Netflix Logo' className="nav__logo" onClick={() => window.location.href = "/"}
+            <img alt='Netflix Logo' className="nav__logo" onClick={() => window.location.href = "/react-netflix-app"}
                 //src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/170px-Netflix_2015_logo.svg.png' 
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/170px-Netflix_2015_logo.svg.png"
             />
