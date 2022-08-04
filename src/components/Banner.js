@@ -28,7 +28,7 @@ export default function Banner() {
         const {data: movieDetail } = await axios.get(`movie/${movieId}`, {
             params: { append_to_response: "videos" },
         });
-        console.log(movieDetail);
+        //console.log(movieDetail);
         setMovie(movieDetail);
         // 특정 영화의 더 상세한 정보를 가져오기(비디오 정보도 포함) 값 찍기
         // const results = await axios.get(`movie/${movieId}`, {
@@ -41,15 +41,17 @@ export default function Banner() {
     const truncate = (str, n) => {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
       };
-
+      console.log('movie',movie);
       if(!isClicked){
         return (
-            <header className='banner' 
-            style={{
-                backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`,
-                backgroundPosition: "top center",
-                backgroundSize: "cover"
-                }}>
+          <header
+          className="banner"          
+          style={{
+            backgroundImage: `${movie.backdrop_path ? `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")` : null }`,            
+            backgroundPosition: "top center",
+            backgroundSize: "cover",
+          }}
+        >
         
                 <div className='banner__contents'>
                     <h1 className="banner__title">{movie.title || movie.name || movie.original_name}</h1>
@@ -67,7 +69,7 @@ export default function Banner() {
         
                 <div className='banner--fadeBottom'></div>
             </header>
-          )
+          );
       }
       else{
         return (

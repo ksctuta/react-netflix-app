@@ -67,11 +67,9 @@ export default function Row({ title, id, fetchUrl, isLargeRow }) {
 
                 <div id={id} className="row__posters">
                     {movies.map(movie => (
-                        <SwiperSlide>
-                        <img key={movie.id} style={{ padding: "25px 0" }} className={`row__poster ${isLargeRow && "row__posterLarge"}`}
-                            src={`https://image.tmdb.org/t/p/original/${
-                                isLargeRow ? movie.poster_path : movie.backdrop_path
-                            } `}
+                        <SwiperSlide key={movie.id}>
+                        <img style={{ padding: "25px 0" }} className={`row__poster ${isLargeRow && "row__posterLarge"}`}
+                            src={`https://image.tmdb.org/t/p/original/${isLargeRow ? movie.poster_path : movie.backdrop_path}`}
                             alt={movie.name} onClick={() => handleClick(movie)}
                         />
                         </SwiperSlide>

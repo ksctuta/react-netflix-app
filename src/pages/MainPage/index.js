@@ -13,7 +13,6 @@ export default function MainPage() {
             <Row title="Action Movies" id="AM" fetchUrl={requests.fetchActionMovies} />
             <Row title="Horror Movies" id="HM" fetchUrl={requests.fetchHorrorMovies} />
             <Row title="Comedy Movies" id="CM" fetchUrl={requests.fetchComedyMovies} />
-            {/* <Row title="Documentary Movies" id="DM" fetchUrl={requests.fetchDocumentaries} /> */}
         </div>
     )
 }
