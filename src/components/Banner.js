@@ -47,7 +47,7 @@ export default function Banner() {
           <header
           className="banner"          
           style={{
-            backgroundImage: `${movie.backdrop_path ? `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")` : null }`,            
+            backgroundImage: `${movie.backdrop_path ? `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")` : null }`,
             backgroundPosition: "top center",
             backgroundSize: "cover",
           }}
